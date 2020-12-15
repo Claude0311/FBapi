@@ -6,10 +6,17 @@ const FBLogin = ()=>{
     const responseFacebook = async (res) => {
         if(res.status==='unknown') return
         console.log(res)
-        const {picture:{data}} = res
-        setUrl(data.url)
-        const members = await axios.get('https://www.facebook.com/groups/ntueeplus/members')
-        console.log(members)
+        const {picture:{data:imgurl},name} = res
+        axios.post('http://localhost:4000/register',{name})
+        .then(({data})=>{
+            console.log(data)
+            setUrl(imgurl.url)
+        }).catch(
+            e=>{
+                console.log(e)
+            }
+        )
+        console.log(res)
     }
     const [url,setUrl] = useState('')
     return (
