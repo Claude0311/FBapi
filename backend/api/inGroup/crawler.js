@@ -7,8 +7,8 @@ import { compare } from './imgComp';
 const options = new chrome.Options()
     .addArguments('-incognito', '--disable-popup-blocking','--headless','--disable-gpu')
 
-const username = 'ntueeplus2020@gmail.com'
-const password = 'ntuee+2020'
+const username = '+886917363322'
+const password = 'helloworld'
 // const inputClass = 'oajrlxb2 rq0escxv f1sip0of hidtqoto lzcic4wl hzawbc8m ijkhr0an nlq1og4t sgqwj88q b3i9ofy5 oo9gr5id b1f16np4 hdh3q7d8 dwo3fsh8 qu0x051f esr5mh6w e9989ue4 r7d6kgcz br7hx15l h2jyy9rg n3ddgdk9 owxd89k7 ihxqhq3m jq4qci2q k4urcfbm iu8raji3 tv7at329 l60d2q6s d1544ag0 hwnh5xvq tw6a2znq o1lsuvei'
 const asyncSome = async (arr, predicate) => {
 	for (let e of arr) {
