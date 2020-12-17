@@ -7,17 +7,8 @@ web template with frontend/backend
 ```
 $ yarn install-all
 ```
-* then open two terminal to run client and server
-### client
-```
-$ yarn start
-```
-
-### backend
-```
-$ yarn server
-```
-### both
+### run
 ```
 $ yarn dev
 ```
+**新人應該會沒有權限，要測試的人跟我講一聲我再加你權限**

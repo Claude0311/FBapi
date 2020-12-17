@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import webdriver,{Key,By, until, promise} from 'selenium-webdriver'
 import chrome from 'selenium-webdriver/chrome.js'
+//https://intoli.com/blog/running-selenium-with-headless-chrome/
 import { compare } from './imgComp';
 
 const options = new chrome.Options()
@@ -14,7 +15,7 @@ const asyncSome = async (arr, predicate) => {
 		if (await predicate(e)) return true
 	}
 	return false
-};
+}
 
 const main = async (name='陳君輔',FBicon)=>{
     let driver = await new webdriver.Builder()
