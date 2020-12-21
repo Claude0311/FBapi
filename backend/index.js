@@ -4,6 +4,7 @@ import DB from './model/db.js'
 import api from './api/api'
 import session from 'express-session'
 import connect from 'connect-mongo'
+import path from 'path'
 
 const app = express()
 DB.once('open',()=>{
@@ -33,15 +34,18 @@ DB.once('open',()=>{
 		})
 	)
 	
-	app.get('/', (_,res) => {
-		res.send('hello world')
-	})
-	
+	// app.get('/', (_,res) => {
+	// 	res.send('hello world')
+	// })
+	const buildPath = path.join('.', '..', 'frontend','build')
+	app.use(express.static(buildPath))
+
 	app.use(api)
-	
-	app.listen(process.env.PORT || 4000,  () => {
+
+	const port = process.env.PORT || 4000
+	app.listen(port,  () => {
 		// require('./util/crawler')(true)
 		console.log('server connect')
-		console.log(`port name: ${process.env.PORT || 4000}`)
+		console.log(`port name: ${port}`)
 	})
 })

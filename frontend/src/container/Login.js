@@ -3,7 +3,6 @@ import axios from 'axios'
 import FacebookLogin from "react-facebook-login"
 import {FB} from 'fb'
 
-
 const FBLogin = ()=>{
     const responseFacebook = async (res) => {
         if(res.status==='unknown') return
@@ -26,7 +25,7 @@ const FBLogin = ()=>{
         })
         console.log({imgurl})
         setStatus('loading... it might take a while')
-        axios.post('http://localhost:4000/register',{imgurl,name})
+        axios.post(`/register`,{imgurl,name})
         .then(({data})=>{
             console.log(data)
             setUrl(imgUrl.url)
