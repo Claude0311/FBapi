@@ -42,7 +42,7 @@ const FBLogin = ()=>{
     <>
         <p>{status}</p>
         <FacebookLogin
-            appId="969130733557478"
+            appId="571174603253755"//"969130733557478"
             autoLoad={false}
             fields="name,email,picture"
             callback={responseFacebook}
