@@ -2,7 +2,7 @@ import react,{Component, useState, useEffect} from 'react'
 import axios from 'axios'
 import FacebookLogin from "react-facebook-login"
 import {FB} from 'fb'
-const backURL = 'http://localhost:4000'
+const backURL = ''//'http://localhost:4000'
 
 const FBLogin = ()=>{
     const responseFacebook = async (res) => {
