@@ -5,12 +5,12 @@
   "author": "Claude0311 <ck1041016@gl.ck.tp.edu.tw>",
   "license": "MIT",
   "scripts": {
-    "start": "cd frontend && yarn start",
-    "server": "cd backend && yarn server",
+    "start-client": "cd frontend && yarn start",
+    "start": "cd backend && yarn server",
     "build": "cd frontend && yarn build",
     "install-all": "yarn && yarn heroku-prebuild",
     "heroku-prebuild": "cd frontend && yarn && cd ../backend && yarn",
-    "dev": "npm-run-all --parallel start server"
+    "dev": "npm-run-all --parallel start-client start"
   },
   "dependencies": {
     "npm-run-all": "^4.1.5",
