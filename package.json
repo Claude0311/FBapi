@@ -8,8 +8,8 @@
     "start": "cd frontend && yarn start",
     "server": "cd backend && yarn server",
     "build": "cd frontend && yarn build",
-    "install-all": "yarn && yarn heroku-postinstall",
-    "heroku-postinstall": "cd frontend && yarn && cd ../backend && yarn",
+    "install-all": "yarn && yarn heroku-prebuild",
+    "heroku-prebuild": "cd frontend && yarn && cd ../backend && yarn",
     "dev": "npm-run-all --parallel start server"
   },
   "dependencies": {
