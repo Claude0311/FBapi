@@ -6,11 +6,12 @@
   "license": "MIT",
   "scripts": {
     "start-client": "cd frontend && yarn start",
-    "start": "cd backend && yarn server",
+    "server": "cd backend && yarn server",
+    "start": "cd backend && yarn start",
     "build": "cd frontend && yarn build",
     "install-all": "yarn && yarn heroku-prebuild",
     "heroku-prebuild": "cd frontend && yarn && cd ../backend && yarn",
-    "dev": "npm-run-all --parallel start-client start"
+    "dev": "npm-run-all --parallel start-client server"
   },
   "dependencies": {
     "npm-run-all": "^4.1.5",
