@@ -2,6 +2,7 @@ import react,{Component, useState, useEffect} from 'react'
 import axios from 'axios'
 import FacebookLogin from "react-facebook-login"
 import {FB} from 'fb'
+const backURL = 'http://localhost:4000'
 
 const FBLogin = ()=>{
     const responseFacebook = async (res) => {
@@ -25,7 +26,7 @@ const FBLogin = ()=>{
         })
         console.log({imgurl})
         setStatus('loading... it might take a while')
-        axios.post(`/register`,{imgurl,name})
+        axios.post(`${backURL}/register`,{imgurl,name})
         .then(({data})=>{
             console.log(data)
             setUrl(imgUrl.url)

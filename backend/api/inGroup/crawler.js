@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import 'chromedriver'
 import webdriver,{Key,By, until, promise} from 'selenium-webdriver'
 import chrome from 'selenium-webdriver/chrome.js'
 //https://intoli.com/blog/running-selenium-with-headless-chrome/
@@ -50,10 +51,12 @@ const main = async (name='陳君輔',FBicon)=>{
             const imgUrl = await ijw[0].findElement(By.tagName('image')).getAttribute('xlink:href')
             const {data} = await Axios.get(imgUrl,{responseType: 'arraybuffer'})
             console.log(data)
+            driver.quit()
             const mf = await compare(FBicon,data)
             return mf
         }
         else{
+            webdriver.quit()
             return false
         }
     })
